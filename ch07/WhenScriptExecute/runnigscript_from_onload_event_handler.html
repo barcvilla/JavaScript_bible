@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>An old school HTML based on onload script</title>
+    <!-- La pagina completa se carga sin ejecutar ningun script aunque la pagina carga en memodia la funcion done()
+      luego que el documento es cargado, el browser dispara el evento onload() lo cual ocasiona que el metodo done()
+      sea ejecutado, luego el usuario ve el mensaje.-->
+    <script type="text/javascript">
+        function done()
+        {
+            alert("The page has fineshed loading");
+        }
+    </script>
+</head>
+<body onload="done()">
+    <h1>An old school HTML-based onload script</h1>
+    <p>Here is some body text</p>
+</body>
+</html>
