@@ -3,7 +3,7 @@
  */
 function getStateDate()
 {
-    var USState = new Array(4);
+    var USStates = new Array(4);
     USStates[0] = "Alabama";
     USStates[1] = "Alaska";
     USStates[2] = "Arizona";
@@ -17,15 +17,16 @@ function getStateDate()
 
     var selectedState = window.document.getElementById("entry").value;
 
-    for(var i = 0; i < USState.length; i++)
+    for(var i = 0; i < USStates.length; i++)
     {
-        if(USState[i] == selectedState)
-        {
-            alert("Selecciono el estado de: " + USState[i] + " y su state date is " + stateEntered[i])
+        if (USStates[i] == selectedState) {
+            alert("Selecciono el estado de: " + USStates[i] + " y su state date is " + stateEntered[i])
         }
         else
         {
-            alert("Lo siento el dato . " + selectedState + " no se reconoe como un estado" );
+            alert("Perdon. '" + selectedState + "' no se encuentra en la lista de estados.");
+            break;
         }
     }
+
 }
